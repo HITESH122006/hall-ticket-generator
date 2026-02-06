@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Portal | GHRCE&M</title>
+
+    <!-- Auto redirect after 5 seconds -->
+    <meta http-equiv="refresh" content="5;url=index.php">
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background:
+                linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url("assets/images/bg.jpg") center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        /* Fade-in for college name */
+.fade-text {
+    opacity: 0;
+    animation: textFade 1.6s ease forwards;
+    animation-delay: 0.4s;
+}
+
+/* Slight delay for role text */
+.fade-role {
+    opacity: 0;
+    animation: textFade 1.6s ease forwards;
+    animation-delay: 0.8s;
+}
+
+@keyframes textFade {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+        .splash-box {
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .splash-box img {
+            max-width: 120px;
+            max-height: 120px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            margin-bottom: 15px;
+            padding: 5px;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin: 0;
+            letter-spacing: 1px;
+        }
+
+        .role {
+            margin-top: 6px;
+            font-size: 15px;
+            color: #8be28b; /* STUDENT GREEN */
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+
+        .loader {
+            margin: 25px auto 0;
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(255,255,255,0.3);
+            border-top: 4px solid #8be28b;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="splash-box">
+    <img src="assets/images/logo.png" alt="College Logo">
+
+    <h1 class="fade-text">
+        G. H. Raisoni College of Engineering & Management
+    </h1>
+
+    <div class="role fade-role">STUDENT PORTAL</div>
+
+    <div class="loader"></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f6f9;
+}
+
+.header {
+    background: linear-gradient(to right, #003973, #e5e5be);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 30px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+    background: #003973;
+    color: white;
+    cursor: pointer;
+}
+
+button:disabled {
+    background: gray;
+    cursor: not-allowed;
+}
+/* ================= NOTICE BOARD ================= */
+
+.notice-section {
+    grid-column: 1 / -1; /* spans full dashboard width */
+    padding: 10px 20px 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.notice-section h2 {
+    grid-column: span 2;
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+/* NOTICE CARD */
+.notice-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    gap: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* AVATAR */
+.notice-avatar {
+    width: 46px;
+    height: 46px;
+    background: #003973;
+    color: #fff;
+    border-radius: 50%;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* CONTENT */
+.notice-content h4 {
+    margin: 0 0 6px;
+    font-size: 15px;
+    color: #ff7a00;
+}
+
+.notice-content .date {
+    font-size: 12px;
+    color: #777;
+}
+
+.notice-content p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.show-more {
+    color: #003973;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* ATTACHMENTS */
+.attachments {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.pdf {
+    background: #f1f1f1;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+/* POSTED BY */
+.posted-by {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #555;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+    .notice-section {
+        grid-template-columns: 1fr;
+    }
+
+    .notice-section h2 {
+        grid-column: span 1;
+    }
+}
+
